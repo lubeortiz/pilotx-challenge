@@ -1,7 +1,6 @@
 .post-card {
   display: block;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #1F2937;
   border-radius: 8px;
   padding: 20px;
   text-decoration: none;
@@ -18,11 +17,11 @@
 .post-title {
   font-size: 1.2em;
   margin-bottom: 10px;
-  color: #333;
+  color: #CBA0FF;
 }
 
 .post-body {
-  color: #666;
+  color: white;
   line-height: 1.5;
   margin-bottom: 15px;
 }

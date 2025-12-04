@@ -7,7 +7,7 @@
   min-height: 100vh;
 }
 .post-content {
-  background: #fff;
+  background: #1F2937;
   border-radius: 8px;
   padding: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -17,12 +17,11 @@
 .post-content h1 {
   font-size: 2em;
   margin-bottom: 15px;
-  color: #333;
 }
 .post-body {
   font-size: 1.1em;
   line-height: 1.6;
-  color: #555;
+  color: white;
 }
 .post-content hr {
   border: none;
@@ -38,7 +37,7 @@
   h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
   }
 }
 .comments-list {
@@ -48,7 +47,7 @@
 }
 .no-comments {
   text-align: center;
-  color: #777;
+  color: rgb(248, 232, 203);
   font-style: italic;
   padding: 20px;
 }
@@ -61,7 +60,7 @@
 }
 .pagination button {
   padding: 8px 12px;
-  background: #D6DC82;
+  background: #141334;
   color: white;
   border: none;
   border-radius: 4px;
@@ -69,7 +68,7 @@
   transition: background 0.2s;
 }
 .pagination button:hover:not(:disabled) {
-  background: #d6dc8294;
+  background: #14133494;
 }
 .pagination button:disabled {
   background: #ccc;
@@ -78,13 +77,7 @@
 .loading-state,
 .error-state,
 .not-found {
-  text-align: center;
-  padding: 50px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 600px;
+  color: white;
 }
 .error-state h2,
 .not-found h2 {
@@ -94,7 +87,7 @@
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #D6DC82;
+  border-top: 4px solid #141334;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 20px auto;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import Comment from '../components/Comment';
 import CommentForm from '../components/CommentForm';
@@ -7,6 +7,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import Swal from 'sweetalert2';
 
 const PostPage = () => {
+
+  const topCommentsRef = useRef(null);
 
   const Toast = Swal.mixin({
     toast: true,
@@ -77,6 +79,7 @@ const PostPage = () => {
 
       const newComment = await response.json();
       setComments(prevComments => [newComment, ...prevComments]);
+      topCommentsRef.current?.scrollIntoView({ behavior: 'smooth' });
       setCurrentPage(1);
 
       Toast.fire({
@@ -108,7 +111,6 @@ const PostPage = () => {
   if (isLoading) {
     return (
       <div className="loading-state">
-        <h2>Cargando Contenido...</h2>
         <div className="spinner"></div>
       </div>
     );
@@ -117,7 +119,7 @@ const PostPage = () => {
   if (error) {
     return (
       <div className="error-state">
-        <a href='/' style={{ textDecoration: 'none', color: 'black', '-webkit-text-stroke': '.5px', marginRight: '20px' }}><i class="bi bi-arrow-left"></i></a>
+        <a href='/' style={{ textDecoration: 'none', color: 'white', '-webkit-text-stroke': '.5px', marginRight: '20px' }}><i class="bi bi-arrow-left"></i></a>
         <h2>Error al cargar</h2>
         <p>{error.message}</p>
         <p>Por favor, inténtelo de nuevo más tarde.</p>
@@ -138,7 +140,7 @@ const PostPage = () => {
     <div className="main-container d-flex align-items-center">
       <article className="post-content">
         <div className='d-flex align-items-center justify-content-start flex-row'>
-          <a href='/' style={{ textDecoration: 'none', color: 'black', '-webkit-text-stroke': '.5px', marginRight: '20px' }}><i class="bi bi-arrow-left"></i></a>
+          <a href='/' style={{ textDecoration: 'none', color: 'white', '-webkit-text-stroke': '.5px', marginRight: '20px' }}><i class="bi bi-arrow-left"></i></a>
           <h1>{post.title}</h1>
         </div>
         <div className='overflow-y-auto'>
@@ -153,6 +155,7 @@ const PostPage = () => {
           <p className="no-comments">Aún no hay comentarios. ¡Sé el primero en comentar!</p>
         ) : (
           <>
+            <div ref={topCommentsRef}></div>
             <div className="comments-list">
               {currentComments.map(comment => (
                 <Comment

@@ -9,7 +9,7 @@
   margin-bottom: 20px;
 }
 .read-more {
-  color: #262628;
+  color: white;
   font-weight: bold;
   text-align: right;
 }
@@ -21,14 +21,13 @@
   margin-top: 20px;
 }
 .loading-state {
-  text-align: center;
-  padding: 50px;
+  color: white;
 }
 .spinner {
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #D6DC82;
+  border-top: 4px solid #141334;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 20px auto;

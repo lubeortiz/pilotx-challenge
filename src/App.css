@@ -5,17 +5,19 @@ body {
 
 .App {
   text-align: center;
+  background-color: #231355;
 }
 
 .main-container {
-  background-color: #FFF6EF;
+  background-color: #231355;
   height: 100%;
   overflow-y: auto;
+  color: white;
 }
 
 .header, .footer {
-  background-color: #D6DC82;
-  color: #262628;
+  background-color: #141334;
+  color: white;
   height: 50px;
   display: flex;
   align-items: center;
@@ -27,7 +29,7 @@ body {
 
 button {
   padding: 10px 15px;
-  background: #D6DC82;
+  background: #141334;
   color: white;
   border: none;
   border-radius: 5px !important;
@@ -36,10 +38,32 @@ button {
 }
 
 button:hover:not(:disabled) {
-  background: #D6DC8294;
+  background: #14133494;
 }
 
 button:disabled {
   background: #ccc;
   cursor: not-allowed;
+}
+
+::-webkit-scrollbar,
+.comments-scroll-area::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track,
+.comments-scroll-area::-webkit-scrollbar-track {
+  background: #f1f1f14d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb,
+.comments-scroll-area::-webkit-scrollbar-thumb {
+  background: #B0B0B0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover,
+.comments-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }

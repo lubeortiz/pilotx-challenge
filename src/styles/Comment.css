@@ -1,8 +1,7 @@
 .comment-card {
   display: flex;
   align-items: flex-start;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
+  background: #1F2937;
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 12px;
@@ -22,7 +21,7 @@
   height: 48px;
   border-radius: 50%;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #ffffff;
+  color: #1F2937;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,20 +43,20 @@
   margin: 0;
   font-size: 1.1em;
   font-weight: 600;
-  color: #333333;
+  color: #FFFFFF96;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 .comment-email {
   font-size: 0.9em;
-  color: #666666;
+  color: #FFFFFF66;
   font-style: italic;
 }
 .comment-body {
   margin: 0;
   line-height: 1.6;
-  color: #555555;
+  color: white;
   word-wrap: break-word;
 }
 @media (max-width: 768px) {
