@@ -3,9 +3,9 @@ import '../styles/CommentForm.css';
 
 const CommentForm = ({ onPublish }) => {
   const [formData, setFormData] = useState({
-    name: 'A',
-    email: 'A@A.COM',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus ante non odio finibus ultrices. Donec vehicula, eros vel varius feugiat, arcu neque tincidunt metus, vel interdum lorem enim aliquam urna. Cras commodo commodo quam quis venenatis. Duis sodales tempus metus, et sodales urna ornare vitae. Nunc volutpat vestibulum erat, eu vestibulum nisi molestie et. Nulla vestibulum sodales est vitae varius. Cras mattis egestas maximus. Phasellus mattis lacinia massa, eget fermentum arcu scelerisque eget. In tempus est eget volutpat condimentum. Nulla faucibus ut ipsum a rutrum. Praesent id venenatis eros, sed placerat sem. Sed sit amet sodales sapien, ac rhoncus est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam convallis urna non erat egestas, quis viverra velit faucibus.',
+    name: '',
+    email: '',
+    body: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
