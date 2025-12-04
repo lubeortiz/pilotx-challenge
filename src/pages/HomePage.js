@@ -7,7 +7,7 @@ const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 8;
+  const postsPerPage = 10;
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -62,7 +62,7 @@ const HomePage = () => {
   }
 
   return (
-    <div className="main-container">
+    <div className="main-container posts-section">
       <h1>Publicaciones</h1>
       {posts.length === 0 ? (
         <p>No hay publicaciones disponibles.</p>
